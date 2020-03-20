@@ -1,0 +1,19 @@
+{% extends '_base.html' %}
+
+
+{% block title %}
+<title>Images</title>
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="img-parent">
+    {% for post in post_list %}
+    <div class="img-hover-zoom">
+        <a href="{% url 'detail_view' post.pk %}"><img src="{{ post.image.url }}" alt="" class="listimages "></a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
