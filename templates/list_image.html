@@ -10,9 +10,11 @@
 
 <div class="img-parent">
     {% for post in post_list %}
-    <div class="img-hover-zoom">
-        <a href="{% url 'detail_view' post.pk %}"><img src="{{ post.image.url }}" alt="" class="listimages "></a>
-    </div>
+    <a href="{% url 'detail_view' post.pk %}">
+        <div class="img-hover-zoom">
+            <img src="{{ post.image.url }}" alt="" class="listimages ">
+        </div>
+    </a>
     {% endfor %}
 </div>
 

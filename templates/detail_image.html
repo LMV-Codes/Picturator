@@ -7,10 +7,22 @@
 
 
 {% block content %}
+
+
+{% if perms.main_app.special_status %}
+<img src="{{ post_detail.image.url }}" alt="" class="img-detail">
+<p> Expousure Time:{{ post_detail.exif.ExposureTime }}</p>
+<p> ISO: {{ post_detail.exif.ISOSpeedRatings }}</p>
+<p> Aperture Value:{{ post_detail.exif.FNumber }}</p>
+<p> Focal Length{{ post_detail.exif.FocalLength }}</p>
+<p> Lens: {{ post_detail.exif.LensModel }}</p>
+<a href="{{ post_detail.image.url }}">DOWLOAD IMAGE</a>
+{% else %}
 <img src="{{ post_detail.image.url }}" alt="" class="img-detail">
 <p> Expousure Time:{{ post_detail.exif.ExposureTime }}</p>
 <p> ISO: {{ post_detail.exif.ISOSpeedRatings }}</p>
 <p> Aperture Value:{{ post_detail.exif.ApertureValue }}</p>
 <p> Focal Length{{ post_detail.exif.FocalLength }}</p>
 <p> Lens: {{ post_detail.exif.LensModel }}</p>
+{% endif %}
 {% endblock content %}

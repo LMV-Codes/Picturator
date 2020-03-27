@@ -1,6 +1,21 @@
+.transparent {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: rgb(230,230,230);
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+
 .listimages {
     width: auto;
-    height: 200px;
+    height: 300px;
   }
 
 .img-parent {
@@ -11,17 +26,21 @@
 .img-detail {
   width: 100%;
   height: auto;
-  max-width: 35vw;
+  max-width: 50vw;
+  margin: 3px;
 }
 
 .img-hover-zoom {
     height: 300px;
-    padding: 5px;
+    width: 300px;
+    margin: 4px;
     overflow: hidden;
     flex-wrap: wrap;
     display: flex; 
     align-items: center;
     justify-content: center;
+    border: 2px solid;
+    border-color: rgba(0, 0, 0, 0.2);
   }
   
   .img-hover-zoom img {
@@ -30,5 +49,5 @@
   }
   
   .img-hover-zoom:hover img {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
