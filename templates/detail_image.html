@@ -9,20 +9,22 @@
 {% block content %}
 
 
+<img src="{{ post_detail.image.url }}" alt="" class="img-detail">
+<h3 class="center">{{ post_detail.title }}</h3>
+<p> Expousure Time: {{ post_detail.exif.ExposureTime }}</p>
+<p> ISO: {{ post_detail.exif.ISOSpeedRatings }}</p>
+<p> Aperture Value: {{ post_detail.exif.FNumber }}</p>
+<p> Focal Length: {{ post_detail.exif.FocalLength }}</p>
+<p> Lens: {{ post_detail.exif.LensModel }}</p>
 {% if perms.main_app.special_status %}
-<img src="{{ post_detail.image.url }}" alt="" class="img-detail">
-<p> Expousure Time:{{ post_detail.exif.ExposureTime }}</p>
-<p> ISO: {{ post_detail.exif.ISOSpeedRatings }}</p>
-<p> Aperture Value:{{ post_detail.exif.FNumber }}</p>
-<p> Focal Length{{ post_detail.exif.FocalLength }}</p>
-<p> Lens: {{ post_detail.exif.LensModel }}</p>
-<a href="{{ post_detail.image.url }}">DOWLOAD IMAGE</a>
+
+<div class="center">
+    <a href="{{ post_detail.image.url }}" class="btn btn-primary">DOWLOAD IMAGE</a>
+</div>
+
 {% else %}
-<img src="{{ post_detail.image.url }}" alt="" class="img-detail">
-<p> Expousure Time:{{ post_detail.exif.ExposureTime }}</p>
-<p> ISO: {{ post_detail.exif.ISOSpeedRatings }}</p>
-<p> Aperture Value:{{ post_detail.exif.ApertureValue }}</p>
-<p> Focal Length{{ post_detail.exif.FocalLength }}</p>
-<p> Lens: {{ post_detail.exif.LensModel }}</p>
+<div class="center">
+    <a href="{% url 'orders' %}" class="btn btn-secondary">GET PREMIUM</a>
+</div>
 {% endif %}
 {% endblock content %}
