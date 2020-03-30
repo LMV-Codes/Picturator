@@ -3,7 +3,7 @@ version: '3.7'
 services:
     web:
         build: .
-        command: python /code/manage.py runserver 0.0.0.0:8000
+        command: gunicorn picturator_project.wsgi -b 0.0.0.0:8000
         environment:
             - SECRET_KEY=pu)+y_2$$n9^jhn7x2p2dn%w()!9r)dlu4c-*(p#o0i&r%*@2ai
             - DEBUG=0
