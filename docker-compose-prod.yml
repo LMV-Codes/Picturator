@@ -9,7 +9,7 @@ services:
             - DEBUG=0
             - STRIPE_TEST_PUBLISHABLE_KEY=pk_test_J4r0TOrN7faxfBgEwPnkcsYg00izQXW7en
             - STRIPE_TEST_SECRET_KEY=sk_test_JyzJbvODmXovYyph3zyHVeyC00Tz94sdx3
-            - ENVIRONMENT=development
+            - ENVIRONMENT=production
         volumes:
             - .:/code
         ports:
