@@ -4,12 +4,13 @@ from django.conf import settings
 from django.shortcuts import render
 import stripe
 from django.contrib.auth.models import Permission
+from django.contrib.auth.mixins import LoginRequiredMixin
 # Create your views here.
 
 stripe.api_key = settings.STRIPE_TEST_SECRET_KEY
 
 
-class OrdersPageView(TemplateView):
+class OrdersPageView(LoginRequiredMixin, TemplateView):
     template_name = 'purchase.html'
 
     def get_context_data(self, **kwargs):
