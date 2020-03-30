@@ -7,8 +7,8 @@ services:
         environment:
             - SECRET_KEY=pu)+y_2$$n9^jhn7x2p2dn%w()!9r)dlu4c-*(p#o0i&r%*@2ai
             - DEBUG=1
-            - STRIPE_TEST_PUBLISHABLE_KEY=pk_test_J4r0TOrN7faxfBgEwPnkcsYg00izQXW7en
-            - STRIPE_TEST_SECRET_KEY=sk_test_JyzJbvODmXovYyph3zyHVeyC00Tz94sdx3
+            - STRIPE_TEST_PUBLISHABLE_KEY=pk_test_aNKIAK4xfaUUG8w1Jmaz1lmN00hfb36tCp
+            - STRIPE_TEST_SECRET_KEY=sk_test_6SmJlrvdhAMZPEXPQoN1fnXk00k1QvIowc
             - ENVIRONMENT=development
         volumes:
             - .:/code
