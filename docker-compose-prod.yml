@@ -10,8 +10,8 @@ services:
       - STRIPE_TEST_PUBLISHABLE_KEY=pk_test_aNKIAK4xfaUUG8w1Jmaz1lmN00hfb36tCp
       - STRIPE_TEST_SECRET_KEY=sk_test_6SmJlrvdhAMZPEXPQoN1fnXk00k1QvIowc
       - ENVIRONMENT=production
-      - AWS_ACCESS_KEY_ID=AKIAQ4UTEFYHVUR476EX
-      - AWS_SECRET_ACCESS_KEY=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
+      - AWS_ACCESS_KEY_ID=AKIAQ4UTEFYH73FG75JP
+      - AWS_SECRET_ACCESS_KEY=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
     volumes:
       - .:/code
     ports:
